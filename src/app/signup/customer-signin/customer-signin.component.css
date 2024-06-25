@@ -1,0 +1,120 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+}
+
+/* Container Styles */
+.top-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #333, #121212); /* Dark gradient background */
+}
+
+/* Login Form and Card */
+.login-form {
+  min-width: 300px;
+  max-width: 450px;
+  width: 100%;
+}
+
+.login-card {
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9);
+}
+
+/* Form Fields */
+.full-width {
+  width: 100%;
+}
+
+.mat-card-title {
+  text-align: center;
+  font-size: 1.8em;
+  color: #bb86fc; /* Accent color for title */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.mat-form-field {
+  margin-bottom: 20px;
+}
+
+.mat-form-field.mat-focused .mat-form-field-outline-thick {
+  border-color: #bb86fc; /* Change border color on focus */
+}
+
+.mat-input-element {
+  border-radius: 5px; /* Rounded corners for inputs */
+  color: #e0e0e0;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  border-color: #555;
+}
+
+.mat-form-field-label {
+  color: #bb86fc; /* Accent color for labels */
+}
+
+.mainContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.actionsTab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Login Button */
+button[mat-raised-button] {
+  width: 100%;
+  background: linear-gradient(to right, #bb86fc, #3700b3); /* Accent gradient button */
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+button[mat-raised-button]:hover {
+  background: linear-gradient(to right, #bb86fc, #6200ee);
+}
+
+/* Error Message */
+mat-error {
+  text-align: center;
+  color: #cf6679; /* Red for error messages */
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+
+  .login-card {
+      width: 100%;
+  }
+}

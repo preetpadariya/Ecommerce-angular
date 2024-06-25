@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.container {
+    background: linear-gradient(to bottom, purple, pink);
+}
+
+.heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 500;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mat-card-image {
+
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.mat-card-content {
+    padding: 20px;
+}
+
+.mat-card-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.mat-card-content p {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.quantity-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.quantity-group button {
+    background-color: #e0e0e0;
+    margin: 0 5px;
+}
+
+.quantity-group input {
+    width: 60px;
+    text-align: center;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+
+.button-group button {
+    margin-right: 10px;
+    background: linear-gradient(to right, #bb86fc, #3700b3);
+}
+
+.mat-raised-button.mat-primary {
+
+    color: white;
+}
+
+.mat-raised-button.mat-accent {
+    background-color: #ff4081;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .box {
+        width: 100%;
+    }
+}

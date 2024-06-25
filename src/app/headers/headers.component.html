@@ -1,0 +1,27 @@
+<mat-toolbar color="primary" class="mat-toolbar bg-black text-white py-4 shadow-lg">
+  <mat-toolbar-row class="px-40">
+    <span class="header flex items-center space-x-4">
+      <img
+        src="..\assets\logo.png"
+        alt="Logo"
+        class="h-10 w-10 rounded-full object-cover"
+      />
+      <h1 class="text-3xl font-extrabold">Shopping</h1>
+    </span>
+    <span class="spacer flex-1"></span>
+    <ng-container [ngSwitch]="menuType">
+      <ng-container *ngSwitchCase="'default'">
+        <a mat-button routerLink="/" class="hover:text-gray-400 text-lg font-medium mx-2">Shop</a>
+        <a mat-button routerLink="/customer-signup" class="hover:text-gray-400 text-lg font-medium mx-2">Register</a>
+        <a mat-button routerLink="/customer-signin" class="hover:text-gray-400 text-lg font-medium mx-2">Login</a>
+      </ng-container>
+      <ng-container *ngSwitchCase="'customer'">
+        <a mat-button routerLink="/" class="hover:text-gray-400 text-lg font-medium mx-2">Shop</a>
+        <a mat-button routerLink="/cart" class="hover:text-gray-400 text-lg font-medium mx-2">Cart</a>
+        <button mat-button (click)="onCustomerLogout()" class="hover:text-gray-400 text-lg font-medium mx-2">
+          Logout
+        </button>
+      </ng-container>
+    </ng-container>
+  </mat-toolbar-row>
+</mat-toolbar>

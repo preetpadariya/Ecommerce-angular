@@ -1,0 +1,85 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: url('https://www.toptal.com/designers/subtlepatterns/patterns/memphis-mini-light.png');
+}
+
+/* Container Styles */
+.top-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #333, #121212);
+}
+
+/* Signup Form and Card */
+.signup-form {
+  min-width: 300px;
+  max-width: 450px;
+  width: 100%;
+}
+
+.signup-card {
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.signup-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Fields */
+.full-width {
+  width: 100%;
+}
+
+.mat-card-title {
+  text-align: center;
+  font-size: 2em;
+  color: #1e3c72;
+  font-weight: bold;
+}
+
+.mainContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 16px 0;
+}
+
+.actionsTab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Signup Button */
+button[mat-raised-button] {
+  width: 100%;
+  background: linear-gradient(to right, #bb86fc, #3700b3);
+  color: white;
+  font-weight: bold;
+}
+
+button[mat-raised-button]:hover {
+  background: linear-gradient(to right, #ff7e5f, #b16c37);
+}
+
+/* Error Message */
+mat-error {
+  text-align: center;
+  color: #f44336;
+  font-weight: bold;
+}

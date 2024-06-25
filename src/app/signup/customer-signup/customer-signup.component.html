@@ -1,0 +1,46 @@
+<div class="top-container">
+	<div class="main">
+		<div class="signup">
+			<form [formGroup]="customerSignupForm" class="signup-form" (ngSubmit)="onSignup()">
+				<mat-card class="signup-card">
+					<mat-card-header>
+						<mat-card-title>User Sign up</mat-card-title>
+					</mat-card-header>
+					<mat-card-content class="mainContent">
+						<mat-form-field color="accent" appearance="outline" class="full-width">
+							<mat-label>User Name</mat-label>
+							<input matInput type="text" formControlName="username">
+							<mat-error
+								*ngIf="customerSignupForm.get('username')?.invalid && customerSignupForm.get('username')?.touched">
+								Enter a Valid Username
+							</mat-error>
+						</mat-form-field>
+
+						<mat-form-field color="accent" appearance="outline" class="full-width">
+							<mat-label>Email</mat-label>
+							<input matInput type="email" formControlName="email">
+							<mat-error
+								*ngIf="customerSignupForm.get('email')?.invalid && customerSignupForm.get('email')?.touched">
+								Enter a Valid Email
+							</mat-error>
+						</mat-form-field>
+
+						<mat-form-field color="accent" appearance="outline" class="full-width">
+							<mat-label>Password</mat-label>
+							<input matInput type="password" formControlName="password">
+							<mat-error
+								*ngIf="customerSignupForm.get('password')?.invalid && customerSignupForm.get('password')?.touched">
+								Enter a Valid Password
+							</mat-error>
+						</mat-form-field>
+					</mat-card-content>
+					<mat-card-actions class="actionsTab">
+						<button mat-raised-button color="accent" [disabled]="customerSignupForm.invalid">Sign
+							up</button>
+						<mat-error>{{signupMsg}}</mat-error>
+					</mat-card-actions>
+				</mat-card>
+			</form>
+		</div>
+	</div>
+</div>

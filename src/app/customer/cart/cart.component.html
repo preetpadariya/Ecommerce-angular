@@ -1,0 +1,29 @@
+<div id="cart-container">
+  <div id="cart-page">
+    <div id="cart-cards">
+      <mat-card class="cart-card" *ngFor="let item of cart??[]">
+        <div class="card-content">
+          <img class="product-image" [src]="item.image" alt="Product Image">
+          <div class="product-details">
+            <h3 class="product-title">{{ item.title }}</h3>
+            <p class="product-quantity">Quantity: {{ item.quantity }}</p>
+            <p class="product-price">Price: &#x20B9; {{ item.price }}</p>
+          </div>
+          <div class="card-actions" (click)="removeFromCart(item.productId)">
+            <a href="#" class="remove-link">
+              <span class="remove-text">Delete</span>
+            </a>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+  <div id="cart-footer">
+    <mat-card id="cart-total-card">
+      <div class="total-content">
+        <span class="total-text">Total: &#x20B9; {{ priceSummary.total }}</span>
+        <button mat-raised-button color="accent" (click)="checkoutOrder()" *ngIf="priceSummary.total > 0">Checkout</button>
+      </div>
+    </mat-card>
+  </div>
+</div>
